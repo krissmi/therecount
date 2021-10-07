@@ -12,6 +12,9 @@
 		6B1738CD270F31F8005D3B56 /* TheRecountSpiderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1738CC270F31F8005D3B56 /* TheRecountSpiderTests.swift */; };
 		6B1738D4270F31FD005D3B56 /* WebClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1738C3270F31D1005D3B56 /* WebClientTests.swift */; };
 		6B1738E0270F363A005D3B56 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 6B1738DF270F363A005D3B56 /* SwiftSoup */; };
+		6B1738E4270F3FF1005D3B56 /* PhoneNumberFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1738E3270F3FF1005D3B56 /* PhoneNumberFinder.swift */; };
+		6B1738E8270F40C5005D3B56 /* PhoneNumberFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1738E7270F40C5005D3B56 /* PhoneNumberFinderTests.swift */; };
+		6B1738ED270F414F005D3B56 /* PhoneNumberFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1738E3270F3FF1005D3B56 /* PhoneNumberFinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,8 @@
 		6B1738CA270F31F8005D3B56 /* TheRecountSpiderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheRecountSpiderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1738CC270F31F8005D3B56 /* TheRecountSpiderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheRecountSpiderTests.swift; sourceTree = "<group>"; };
 		6B1738CE270F31F8005D3B56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B1738E3270F3FF1005D3B56 /* PhoneNumberFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberFinder.swift; sourceTree = "<group>"; };
+		6B1738E7270F40C5005D3B56 /* PhoneNumberFinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberFinderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,7 @@
 			children = (
 				6B1738B7270F3157005D3B56 /* main.swift */,
 				6B1738BF270F31BC005D3B56 /* WebClient.swift */,
+				6B1738E3270F3FF1005D3B56 /* PhoneNumberFinder.swift */,
 			);
 			path = TheRecountSpider;
 			sourceTree = "<group>";
@@ -88,6 +94,7 @@
 				6B1738CE270F31F8005D3B56 /* Info.plist */,
 				6B1738C3270F31D1005D3B56 /* WebClientTests.swift */,
 				6B1738CC270F31F8005D3B56 /* TheRecountSpiderTests.swift */,
+				6B1738E7270F40C5005D3B56 /* PhoneNumberFinderTests.swift */,
 			);
 			path = TheRecountSpiderTests;
 			sourceTree = "<group>";
@@ -186,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B1738E4270F3FF1005D3B56 /* PhoneNumberFinder.swift in Sources */,
 				6B1738C0270F31BC005D3B56 /* WebClient.swift in Sources */,
 				6B1738B8270F3157005D3B56 /* main.swift in Sources */,
 			);
@@ -196,6 +204,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1738CD270F31F8005D3B56 /* TheRecountSpiderTests.swift in Sources */,
+				6B1738ED270F414F005D3B56 /* PhoneNumberFinder.swift in Sources */,
+				6B1738E8270F40C5005D3B56 /* PhoneNumberFinderTests.swift in Sources */,
 				6B1738D4270F31FD005D3B56 /* WebClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
