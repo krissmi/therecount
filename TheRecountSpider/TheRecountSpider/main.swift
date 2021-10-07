@@ -6,6 +6,21 @@
 //
 
 import Foundation
+ 
+let urlStr = "https://therecount.github.io/interview-materials/project-a/1.html"
+guard let url = URL(string: urlStr) else {
+    exit(1)
+}
 
-print("Hello, World!")
+let client = WebClient()
+client.request(with: url) { doc in
+    do {
+        print("doc: \(try doc.text())")
+    }
+    catch {
+        print("error parsing document: \(error)")
+        exit(2)
+    }
+}
 
+exit(0)
