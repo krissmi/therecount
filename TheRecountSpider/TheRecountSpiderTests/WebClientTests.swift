@@ -2,7 +2,6 @@
 //  WebClientTests.swift
 //  TheRecountSpider
 //
-//  Created by Krishna Smith on 10/7/21.
 //
 
 import XCTest

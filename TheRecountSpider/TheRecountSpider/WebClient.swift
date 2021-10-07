@@ -2,24 +2,22 @@
 //  Web.swift
 //  TheRecountSpider
 //
-//  Created by Krishna Smith on 10/7/21.
 //
 
 import Foundation
-import SwiftSoup
 
 class WebClient {
     
+    let sem = DispatchSemaphore(value: 0)
+    
     @discardableResult
-    func request(with endpoint: URL, _ completion: @escaping (Document) -> Void) -> URLSessionDataTask? {
-        
-        let sem = DispatchSemaphore(value: 0)
-        
+    func request(with endpoint: URL, _ completion: @escaping (Data) -> Void) -> URLSessionDataTask? {
+        print("webclient.url: \(endpoint.absoluteString)")
         let request = URLRequest(url: endpoint)
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: request) { data, response, error in
             defer {
-                sem.signal()
+                self.sem.signal()
             }
             
             if let error = error {
@@ -28,19 +26,11 @@ class WebClient {
             }
             
             if let data = data {
-                do {
-                    let html = String(data: data, encoding: .utf8) ?? ""
-                    let doc: Document = try SwiftSoup.parse(html)
-                    completion(doc)
-                }
-                catch {
-                    print("error during retrieval: \(error)")
-                    return
-                }
+                completion(data)
             }
         }
         task.resume()
-        sem.wait()
+        self.sem.wait()
         
         return task
     }
